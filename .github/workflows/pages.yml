@@ -4,21 +4,26 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  build-and-deploy:
+  build-and-package:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    steps: 
-    - name: Upload pages artifact (use upload-artifact v4)
-    uses: actions/upload-artifact@v4
-    with:
-      name: pages
-      path: '.'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload pages artifact (use upload-artifact v4)
+        uses: actions/upload-artifact@v4
+        with:
+          name: pages
+          path: .
+
   deploy:
-    needs: build-and-deploy
+    needs: build-and-package
     runs-on: ubuntu-latest
     permissions:
       pages: write
