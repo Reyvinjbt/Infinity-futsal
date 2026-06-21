@@ -21,6 +21,3 @@ jobs:
         with:
           personal_token: ${{ secrets.GH_PAGES_PAT }}
           publish_dir: .
-          # optional: configure user/email for commit
-          # user_name: github-actions[bot]
-          # user_email: 41898282+github-actions[bot]@users.noreply.github.com
