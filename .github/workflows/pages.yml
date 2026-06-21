@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages (gh-pages via PAT)
 on:
   push:
     branches:
@@ -6,27 +6,21 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 jobs:
-  build-and-package:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Upload pages artifact (use upload-artifact v4)
-        uses: actions/upload-artifact@v4
-        with:
-          name: pages
-          path: .
-
   deploy:
-    needs: build-and-package
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
     steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Deploy to GitHub Pages (using PAT)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GH_PAGES_PAT }}
+          publish_dir: .
+          # optional: configure user/email for commit
+          # user_name: github-actions[bot]
+          # user_email: 41898282+github-actions[bot]@users.noreply.github.com
