@@ -11,13 +11,12 @@ jobs:
       contents: read
       pages: write
       id-token: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: '.'
+    steps: 
+    - name: Upload pages artifact (use upload-artifact v4)
+    uses: actions/upload-artifact@v4
+    with:
+      name: pages
+      path: '.'
   deploy:
     needs: build-and-deploy
     runs-on: ubuntu-latest
@@ -26,8 +25,3 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
-  - name: Upload pages artifact (use upload-artifact v4)
-    uses: actions/upload-artifact@v4
-    with:
-      name: pages
-      path: '.'
