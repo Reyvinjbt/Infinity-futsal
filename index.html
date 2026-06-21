@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Infinity Futsal</title>
+  <meta name="description" content="Infinity Futsal — Más que un equipo, una familia." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" class="logo" alt="Logo de Infinity Futsal" />
+    <h1>INFINITY FUTSAL</h1>
+    <p class="subtitulo">Más que un equipo, una familia.</p>
+
+    <div class="contador" id="contador" aria-live="polite" aria-atomic="true"></div>
+    <p class="meta">Próximo partido: <time id="fecha-partido" datetime="2026-07-07">7 de julio de 2026</time></p>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <ul class="nav-list">
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#tecnico">Técnico</a></li>
+      <li><a href="#partidos">Partidos</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#redes">Redes</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="equipo" aria-labelledby="titulo-jugadores">
+      <h2 id="titulo-jugadores">Jugadores</h2>
+      <ul class="jugadores" role="list">
+        <li class="jugador">Reyvin Blandón</li>
+        <li class="jugador">Fernando Ballesteros</li>
+        <li class="jugador">Joab Treminio</li>
+        <li class="jugador">Keneth Centeno</li>
+        <li class="jugador">Jeferson Palacios</li>
+        <li class="jugador">Jorge Zamora</li>
+        <li class="jugador">Jorge Montenegro</li>
+        <li class="jugador">Moisés Maldonado</li>
+        <li class="jugador">Moisés Rayo</li>
+        <li class="jugador">Jerling Rostrán</li>
+      </ul>
+    </section>
+
+    <section id="tecnico" aria-labelledby="titulo-tecnico">
+      <h2 id="titulo-tecnico">Cuerpo Técnico</h2>
+      <div class="card" role="region" aria-label="Directora técnica">
+        <strong>Directora Técnica:</strong><br>Jasari Tinoco
+      </div>
+      <div class="card" role="region" aria-label="Representantes">
+        <strong>Representantes:</strong><br>Daniela Huerta<br>Jasari Tinoco
+      </div>
+    </section>
+
+    <section id="partidos" aria-labelledby="titulo-partidos">
+      <h2 id="titulo-partidos">Próximo Partido</h2>
+      <div class="card">
+        <p><span aria-hidden="true">📅</span> <time datetime="2026-07-07">07 de julio de 2026</time></p>
+        <p class="meta">Lugar y hora: Por confirmar</p>
+      </div>
+    </section>
+
+    <section id="galeria" aria-labelledby="titulo-galeria">
+      <h2 id="titulo-galeria">Galería</h2>
+      <div class="galeria" role="list">
+        <figure class="foto" role="listitem"><img src="images/photo1.svg" alt="Foto 1 — placeholder"></figure>
+        <figure class="foto" role="listitem"><img src="images/photo2.svg" alt="Foto 2 — placeholder"></figure>
+        <figure class="foto" role="listitem"><img src="images/photo3.svg" alt="Foto 3 — placeholder"></figure>
+        <figure class="foto" role="listitem"><img src="images/photo4.svg" alt="Foto 4 — placeholder"></figure>
+        <figure class="foto" role="listitem"><img src="images/photo5.svg" alt="Foto 5 — placeholder"></figure>
+        <figure class="foto" role="listitem"><img src="images/photo6.svg" alt="Foto 6 — placeholder"></figure>
+      </div>
+    </section>
+
+    <section id="redes" aria-labelledby="titulo-redes">
+      <h2 id="titulo-redes">Redes Sociales</h2>
+      <div class="card">
+        Instagram: <a href="https://instagram.com/Infinity_futsal" target="_blank" rel="noopener noreferrer">@Infinity_futsal</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Infinity Futsal</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
