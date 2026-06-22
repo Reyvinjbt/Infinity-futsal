@@ -121,7 +121,7 @@ h2{
   border:1px solid #262626;
 }
 
-.galeria{
+.goles{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:12px;
