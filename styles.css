@@ -13,13 +13,9 @@
 
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
-body{
-  font-family:var(--font);
-  background:var(--bg);
-  color:var(--accent);
-  line-height:1.4;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  body { background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03), transparent 12%), linear-gradient(135deg, #071028 0%, #0b2340 50%, #08121a 100%), repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 40px); background-size: 120% 120%, cover, 40px 40px; background-attachment: fixed; background-repeat: no-repeat; animation: bgShift 18s ease-in-out infinite; }
+
+@keyframes bgShift { 0% { background-position: 0% 50%, 0 0, 0 0; } 50% { background-position: 100% 50%, 0 0, 0 0; } 100% { background-position: 0% 50%, 0 0, 0 0; } }
 }
 
 header{
