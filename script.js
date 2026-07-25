@@ -36,7 +36,7 @@
     const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
-    contadorEl && (contadorEl.textContent = `⏳ ${days} días ${formatPad(hours)}:${formatPad(minutes)}:${formatPad(seconds)} para el primer partido`);
+    contadorEl && (contadorEl.textContent = `⏳ ${days} días ${formatPad(hours)}:${formatPad(minutes)}:${formatPad(seconds)} para el proximo partido`);
   }
 
   update();
