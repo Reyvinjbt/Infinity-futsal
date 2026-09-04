@@ -2,7 +2,7 @@
 // + inicialización de barras de "Goles" (se calculan según data-goals)
 (function(){
   // --- Contador ---
-  const matchDate = new Date('2026-09-04T15:40:00'); // ajustar si se desea
+  const matchDate = new Date('2026-09-04T17:00:00'); // ajustar si se desea
   const pillText = document.getElementById('pill-text');
   const nextMatchText = document.querySelector('.next-match');
   const countPill = document.getElementById('count-pill');
