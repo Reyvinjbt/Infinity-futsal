@@ -27,7 +27,7 @@
     const seconds = Math.floor(diff / 1000);
 
     if(pillText) pillText.textContent = `${days} DÍAS ${pad(hours)}:${pad(minutes)}:${pad(seconds)} para el próximo partido`;
-    if(nextMatchText) nextMatchText.innerHTML = 'Próximo partido: <strong>22 de septiembre de 2026</strong>';
+    if(nextMatchText) nextMatchText.innerHTML = 'Próximo partido: <strong>22de septiembre de 2026</strong>';
     if(countPill) countPill.classList.add('active');
   }
   updateCountdown();
