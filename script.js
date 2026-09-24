@@ -14,7 +14,7 @@
     let diff = matchDate - now;
     if (diff <= 0){
       if(pillText) pillText.textContent = '0 DÍAS 00:00:00 para el próximo partido';
-      if(nextMatchText) nextMatchText.textContent = 'Próximo partido: Dia del partido';
+      if(nextMatchText) nextMatchText.textContent = 'Próximo partido: Día del partido';
       if(countPill) countPill.classList.remove('active');
       return;
     }
@@ -27,7 +27,7 @@
     const seconds = Math.floor(diff / 1000);
 
     if(pillText) pillText.textContent = `${days} DÍAS ${pad(hours)}:${pad(minutes)}:${pad(seconds)} para el próximo partido`;
-    if(nextMatchText) nextMatchText.innerHTML = 'Próximo partido: <strong>22de septiembre de 2026</strong>';
+    if(nextMatchText) nextMatchText.innerHTML = 'Próximo partido: <strong>22 de septiembre de 2026</strong>';
     if(countPill) countPill.classList.add('active');
   }
   updateCountdown();
@@ -84,19 +84,16 @@
   function initGoalBars(){
     const goalItems = Array.from(document.querySelectorAll('.goal-item'));
     if(goalItems.length === 0) return;
-    // leer valores y calcular máximo
     const values = goalItems.map(it => {
       const v = parseInt(it.getAttribute('data-goals') || '0', 10);
       return isNaN(v) ? 0 : v;
     });
     const max = Math.max(...values, 1);
-    // asignar porcentajes y animar
     goalItems.forEach(it => {
       const v = parseInt(it.getAttribute('data-goals') || '0', 10) || 0;
       const pct = Math.round((v / max) * 100);
       const bar = it.querySelector('.goal-bar');
       if(bar){
-        // delay para stagger
         setTimeout(()=> {
           bar.style.width = pct + '%';
         }, 120);
@@ -104,7 +101,6 @@
     });
   }
 
-  // run after DOM loaded
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', initGoalBars);
   } else {
